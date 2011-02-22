@@ -19,8 +19,8 @@ URL:		http://search.cpan.org/dist/Package-Generator/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(Test::Pod) >= 1.14
-BuildRequires:	perl(Test::Pod::Coverage) >= 1.06
+BuildRequires:	perl-Test-Pod >= 1.14
+BuildRequires:	perl-Test-Pod-Coverage >= 1.06
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,5 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/Package/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/Package/Generator.pm
+%{perl_vendorlib}/Package/Reaper.pm
+%{_mandir}/man3/Package::Generator.3pm*
+%{_mandir}/man3/Package::Reaper.3pm*
