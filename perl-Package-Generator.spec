@@ -8,19 +8,19 @@
 Summary:	Package::Generator - generate new packages quickly and easily
 Summary(pl.UTF-8):	Package::Generator - szybkie i łatwe generowanie nowych pakietów
 Name:		perl-Package-Generator
-Version:	0.103
+Version:	1.106
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Package/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	16cfb1693978960fcde88e57d627b2e0
+# Source0-md5:	92ed633a2d18bbe22d8feda32f761de3
 URL:		http://search.cpan.org/dist/Package-Generator/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Pod >= 1.14
-BuildRequires:	perl-Test-Pod-Coverage >= 1.06
+BuildRequires:	perl-Test-Simple >= 0.96
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
