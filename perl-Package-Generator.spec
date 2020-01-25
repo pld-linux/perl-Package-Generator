@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Package
 %define	pnam	Generator
 Summary:	Package::Generator - generate new packages quickly and easily
